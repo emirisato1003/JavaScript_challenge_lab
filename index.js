@@ -13,7 +13,6 @@ Example output: "I'M 😱 ALMOST 😱 OUT 😱 OF 😱 COFFEE!"
 */
 
 function panic(string) {
-    
     return `${string.toUpperCase().split(' ').join('😱')}!`;
 }
 
