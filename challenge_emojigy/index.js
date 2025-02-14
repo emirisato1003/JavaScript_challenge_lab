@@ -16,9 +16,9 @@ const emojis = {
     "angry": "😠",
     "party": "🎉",
     "heart": "💜",
-    "cat":   "🐱",
-    "dog":   "🐕"
-}
+    "cat": "🐱",
+    "dog": "🐕"
+};
 
 /* 1. Write a function that checks if a lowercase word starts and 
 ends with a colon. If it does, remove the colons and
@@ -34,10 +34,18 @@ Example output: "flower"
 
 Example input: "elephant"
 Example output: "elephant"
-*/ 
-
-function emojifyWord(word){
-    return;
+*/
+function emojifyWord(word) {
+    if (word.startsWith(':') && word.endsWith(':')) {
+        const emojiText = word.slice(1, -1);
+        if (emojiText in emojis) {
+            return emojis[emojiText];
+        } else {
+            return emojiText;
+        }
+    } else {
+        return word;
+    }
 }
 
 /* 2. Write a function to find any emoji shortcodes in a phrase.
@@ -50,17 +58,17 @@ Example output: "I 💜 my 🐱"
 
 Example input: "I :heart: my elephant"
 Example output: "I 💜 my elephant"
-*/ 
+*/
 
-function emojifyPhrase(phrase){
-    return;
+function emojifyPhrase(phrase) {
+    return phrase.split(' ').map(element => emojifyWord(element)).join(' ')
 }
 
 
 
-// console.log(emojifyWord(":heart:"));
-// console.log(emojifyWord(":flower:"));
-// console.log(emojifyWord("elephant"));
+console.log(emojifyWord(":heart:"));
+console.log(emojifyWord(":flower:"));
+console.log(emojifyWord("elephant"));
 
-// console.log(emojifyPhrase("I :heart: my :cat:"));
-// console.log(emojifyPhrase("I :heart: my :elephant:"));
+console.log(emojifyPhrase("I :heart: my :cat:"));
+console.log(emojifyPhrase("I :heart: my :elephant:"));
