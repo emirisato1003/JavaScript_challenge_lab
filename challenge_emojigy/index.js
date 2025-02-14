@@ -36,16 +36,11 @@ Example input: "elephant"
 Example output: "elephant"
 */
 function emojifyWord(word) {
-    if (word.startsWith(':') && word.endsWith(':')) {
-        const emojiText = word.slice(1, -1);
-        if (emojiText in emojis) {
-            return emojis[emojiText];
-        } else {
-            return emojiText;
-        }
-    } else {
-        return word;
-    }
+
+    if(!word.startsWith(':') && !word.endsWith(':')) return word
+
+    const emojiText = word.slice(1, -1);
+    return emojis[emojiText] ? emojis[emojiText] : emojiText
 }
 
 /* 2. Write a function to find any emoji shortcodes in a phrase.
