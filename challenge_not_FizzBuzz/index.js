@@ -24,7 +24,7 @@ Hint: Remainder operator, modulo
 function awardBonuses() {
     let prize = '';
     for (let i = 1; i <= 100; i++) {
-        if (i % 5 === 0 && i % 3 === 0) {
+        if (i % 15 === 0) {
             prize = 'JACKPOT! 1 Million and a Yacht!';
         } else if (i % 3 === 0) {
             prize = 'vacation!';
