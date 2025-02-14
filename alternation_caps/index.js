@@ -9,8 +9,9 @@ Example output: "I'M So hApPy iT'S MoNdAy"
 
 
 function altCaps(str) {
-   
-    console.log(result); 
+    return str.split('').map((char, index) =>
+        index % 2 === 0 ? char.toUpperCase() : char.toLowerCase()
+    ).join('');
 }
 
 console.log(altCaps("When you visit Portland you have to go to VooDoo Donuts"));

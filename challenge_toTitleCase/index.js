@@ -15,23 +15,22 @@ Example Output: "Scrimba"
 Hint: Trying using slice() and .toUpperCase()
 */
 
-function capitalizeWord(word){
-    return word.slice(0, 1).toUpperCase() + word.slice(1)
+function capitalizeWord(word) {
+    return word[0].toUpperCase() + word.slice(1);
 }
 
 /* 
 Now write a function that capitalizes every word in a sentence. 
 How can you reuse the function you just wrote? 
-*/ 
+*/
 
-function toTitleCase(str){
+function toTitleCase(str) {
     // convert string to array to store each word
-    const singleWord = str.split(' ')
-    const words = singleWord.map((char) => 
-        char[0].toUpperCase() + char.slice(1)
-    )
-    return words.toString().replaceAll(',',' ')
- 
+    const singleWord = str.split(' ');
+    const words = singleWord.map((char) => capitalizeWord(char)
+    );
+    return words.join(' ');
+
 }
 
 // Test your functions
