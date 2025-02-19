@@ -15,18 +15,26 @@ Example output: [1, 4, 5, 4, 7, 6, 4, 3, 5]
 */
 
 const kittyScores = [
-    [39, 99, 76], 89, 98, [87, 56, 90], 
+    [39, 99, 76], 89, 98, [87, 56, 90],
     [96, 95], 40, 78, 50, [63]
 ];
 
 const kittyPrizes = [
     ["💰", "🐟", "🐟"], "🏆", "💐", "💵", ["💵", "🏆"],
-    ["🐟","💐", "💐"], "💵", "💵", ["🐟"], "🐟"
+    ["🐟", "💐", "💐"], "💵", "💵", ["🐟"], "🐟"
 ];
 
-function flatten(arr){
- 
+function flatten(arr) {
+    let newStr = '';
+    // for(let i= 0; i< arr.length; i++){
+    //     return arr[i].join(',')
+    // }
+    return arr.map((item, index)=> {
+        if(item.length > 0){
+            return newStr.(item.join(','))
+        }
+    })
 }
 
-console.log(flatten(kittyPrizes));
+// console.log(flatten(kittyPrizes));
 console.log(flatten(kittyScores));
