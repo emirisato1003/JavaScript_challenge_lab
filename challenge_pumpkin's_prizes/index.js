@@ -24,17 +24,24 @@ const kittyPrizes = [
     ["🐟", "💐", "💐"], "💵", "💵", ["🐟"], "🐟"
 ];
 
+// function flatten(arr) {
+//     return arr.flat()
+// }
+
 function flatten(arr) {
-    let newStr = '';
-    // for(let i= 0; i< arr.length; i++){
-    //     return arr[i].join(',')
-    // }
-    return arr.map((item, index)=> {
-        if(item.length > 0){
-            return newStr.(item.join(','))
+    // initialize a new empty array
+    const newArr = [];
+    // loop through the passed in array and check - string or array?
+    arr.forEach(element => {
+        // if the item is an array, loop through it, pushing each item into the array
+        if (Array.isArray(element)) {
+            element.forEach(item => newArr.push(item))
+        } else {
+            newArr.push(element);
         }
-    })
+    });
+    return newArr;
 }
 
-// console.log(flatten(kittyPrizes));
+console.log(flatten(kittyPrizes));
 console.log(flatten(kittyScores));
