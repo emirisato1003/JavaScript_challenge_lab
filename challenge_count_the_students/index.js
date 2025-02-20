@@ -14,8 +14,7 @@ Example output: 6
 const studentCount = [50, 53, 61, 67, 60, 70, 78, 80, 80, 81, 90, 110];
 
 function sumArray(arr) {
-    const totalStudent = arr.reduce((acc, sum) => acc + sum, 0);
-    return totalStudent;
+    return totalStudent = arr.reduce((acc, sum) => acc + sum, 0);
 }
 
 console.log(sumArray(studentCount));
