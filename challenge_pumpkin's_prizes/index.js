@@ -24,9 +24,9 @@ const kittyPrizes = [
     ["🐟", "💐", "💐"], "💵", "💵", ["🐟"], "🐟"
 ];
 
-// function flatten(arr) {
-//     return arr.flat()
-// }
+function flatten(arr) {
+    return arr.flat()
+}
 
 function flatten(arr) {
     // initialize a new empty array
