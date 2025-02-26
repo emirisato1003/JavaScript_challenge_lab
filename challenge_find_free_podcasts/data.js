@@ -1,4 +1,4 @@
-export default [
+export const podcasts = [
     {
         id: 1,
         title: "Scrimba Podcast", 

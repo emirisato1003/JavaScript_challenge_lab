@@ -1,4 +1,4 @@
-import podcasts from "./data.js";
+import { podcasts } from "./data.js";
 
 /* Find Free Podcasts 
 
@@ -20,20 +20,20 @@ Expected output:
 ]
 */
 
-function getFreePodcasts(data){
-    let newData = []
+function getFreePodcasts(data) {
+    let newData = [];
     // for(let i = 0; i < data.length; i++){
     //     if(data[i].paid === false){
     //         const {title, rating, paid} = data[i]
     //         newData.push({title, rating, paid})                        
     //     }
     // }
-    for(const {title, rating, paid} of data){
-        if(!paid){
-            newData.push({title, rating, paid})
+    for (const { title, rating, paid } of data) {
+        if (!paid) {
+            newData.push({ title, rating, paid });
         }
     }
-    return newData
+    return newData;
 }
 
 console.log(getFreePodcasts(podcasts));
