@@ -1,4 +1,4 @@
-export const product = [
+export const products = [
     {
         item: "🍭",
         price: 2.99,

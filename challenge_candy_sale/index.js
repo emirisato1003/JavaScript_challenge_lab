@@ -1,4 +1,4 @@
-import { product } from './data.js';
+import { products } from './data.js';
 
 /*
 It's the day after Halloween 🎃 and all the candy is on sale!
@@ -18,11 +18,10 @@ Expected output:
 */
 
 function getSaleItems(data, type) {
-    let shoppingCart = [];
-
-    data.filter(item => item.type === type)
-        .map(({ item, price }) => shoppingCart.push({ item, price }));
-    return shoppingCart;
+    return data.filter(item => item.type === type)
+        .map(({ item, price }) => {
+            return { item, price };
+        });
 };
-
-console.log(getSaleItems(product, 'sweet'));
+const shoppingCart = getSaleItems(products, "sweet");
+console.log(shoppingCart);
