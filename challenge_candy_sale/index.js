@@ -18,7 +18,8 @@ Expected output:
 */
 
 function getSaleItems(data, type) {
-    return data.filter(item => item.type === type)
+    return data
+        .filter(item => item.type === type)
         .map(({ item, price }) => {
             return { item, price };
         });
