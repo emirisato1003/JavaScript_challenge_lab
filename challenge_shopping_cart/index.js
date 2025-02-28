@@ -8,7 +8,9 @@ Example output: 73.44
 */
 
 function total(arr){
-    return arr 
+    return arr.reduce((acc, sum) => {
+        console.log();
+    }, 0)
 }
 
 console.log(total(shoppingCart));
