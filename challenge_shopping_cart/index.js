@@ -8,10 +8,7 @@ Example output: 73.44
 */
 
 function total(arr) {
-    const sum = arr.reduce((accumulator, currentValue) =>
-        (accumulator + currentValue.price)
-        , 0);
-    return sum.toFixed(2)
+    return arr.reduce((sum, item) => sum + item.price, 0).toFixed(2)
 }
 
 console.log(total(shoppingCart));
