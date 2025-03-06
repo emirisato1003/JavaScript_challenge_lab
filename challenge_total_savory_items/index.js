@@ -1,4 +1,4 @@
-import shoppingCart from "./data.js";
+import {shoppingCart} from "./data.js";
 
 /*
 Use reduce() and only reduce() to calculate and return 
@@ -8,8 +8,8 @@ items in the shopping cart.
 Expected output: 9.97  
 */
 
-function totalSavory(arr){
-
+function totalSavory(arr) {
+    return arr;
 }
 
 console.log(totalSavory(shoppingCart));
