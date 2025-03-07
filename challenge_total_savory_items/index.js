@@ -1,4 +1,4 @@
-import {shoppingCart} from "./data.js";
+import { shoppingCart } from "./data.js";
 
 /*
 Use reduce() and only reduce() to calculate and return 
@@ -9,7 +9,11 @@ Expected output: 9.97
 */
 
 function totalSavory(arr) {
-    return arr;
+    console.log(arr);
+    return arr.reduce((acc, item) => {
+        if (item.type === 'savory') return acc + item.price;
+        return acc;
+    }, 0);
 }
 
 console.log(totalSavory(shoppingCart));
