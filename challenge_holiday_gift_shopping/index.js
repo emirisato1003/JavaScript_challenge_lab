@@ -1,4 +1,4 @@
-import products from "./data.js";
+import { products } from "./data.js";
 
 /*
     You're online shopping for holiday gifts, but money is tight
@@ -17,7 +17,7 @@ import products from "./data.js";
 */
 
 function sortProducts(data) {
-
+    
 }
 
 const listByCheapest = sortProducts(products);
