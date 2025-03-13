@@ -17,10 +17,14 @@ import { products } from "./data.js";
 */
 
 function sortProducts(data) {
-    
+    return data.sort((a, b) => {
+        return a.price - b.price 
+    })
 }
 
 const listByCheapest = sortProducts(products);
 console.log(listByCheapest);
 
-
+listByCheapest.forEach(element => {
+    console.log(element.product, element.price)
+});
