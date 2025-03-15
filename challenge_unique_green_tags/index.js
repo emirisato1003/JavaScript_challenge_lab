@@ -17,8 +17,10 @@ Expected output:
 */
 
 function getUniqueTags(data) {
-
+    const tags = data
+    .map((item) => item.tags)
+    .flat()
+    return [...new Set(tags)]
 }
 
 console.log(getUniqueTags(mediaData));
-
