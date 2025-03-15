@@ -16,11 +16,26 @@ Expected output:
 
 */
 
-function getUniqueTags(data) {
+function getUniqueTagsBySet(data) {
     const tags = data
     .map((item) => item.tags)
     .flat()
     return [...new Set(tags)]
 }
 
-console.log(getUniqueTags(mediaData));
+
+function getUniqueTagsByFilter(data) {
+    const tags = data.map(item => item.tags).flat()
+    const uniqueTags = {}
+
+    return tags.filter(tag => {
+        if(!uniqueTags[tag] ){
+            uniqueTags[tag] = true
+            return true
+        }
+        return false
+    })
+}
+
+console.log(getUniqueTagsBySet(mediaData));
+console.log(getUniqueTagsByFilter(mediaData));
