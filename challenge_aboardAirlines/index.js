@@ -24,8 +24,15 @@ each podcast to the console, like this:
 
 */
 
-function sortByDuration(data, flightLength){
-    console.log(data.map(item => item.title));
-}
+function sortByDuration(data, flightLength) {
+        if (flightLength > 60) {
+            data.sort((a, b) => b.duration - a.duration)
+        } else{
+            data.sort((a, b) => a.duration - b.duration)
+        }
+        data.map(({title, duration}, i) => {
+            console.log(`${i + 1}. ${title}, ${duration} minutes`);
+        })
+    };
 
-sortByDuration(podcasts, 60);
+sortByDuration(podcasts, 80);
